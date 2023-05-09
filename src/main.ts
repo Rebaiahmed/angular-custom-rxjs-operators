@@ -38,9 +38,6 @@ export class App {
 
   // listen to our input changes and use our defined custom operator
   ngOnInit() {
-
-    this._snackBar.open('Cannonball!!', 'Splash', {
-    })
     const searchBox = document.getElementById('search');
     fromEvent(searchBox, 'input').pipe(
  // map the input event to get only the input text value 
@@ -52,8 +49,8 @@ export class App {
      console.log('results',results)
    })
 
-  // this.fecthData1()
-   //this.fecthData2()
+  this.fecthData1()
+   this.fecthData2()
   }
 
   constructor(private http: HttpClient,private _snackBar: MatSnackBar) {
@@ -70,13 +67,13 @@ export class App {
 
   fecthData1() {
     this.http.get('https://dummyjson.com/users').pipe(
-      //successToastMessage(this.toastr,'Fetching users is  successful!')
+      successToastMessage(this.toastr,'Fetching users is  successful!')
     ).subscribe();
   }
 
   fecthData2() {
     this.http.get('https://dummyjson.com/products').pipe(
-      //successToastMessage(this.toastr,'Operation fetching products is successful!')
+      successToastMessage(this.toastr,'Operation fetching products is successful!')
     ).subscribe();
   }
 }
