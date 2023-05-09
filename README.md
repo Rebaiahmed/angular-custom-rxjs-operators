@@ -1,3 +1,3 @@
 # angular-custom-rxjs-operators
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-afsqgg)
+POC to explore defining and creating custom Rxjs operators that will be published in a medium blog 
